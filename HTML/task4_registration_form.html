@@ -1,0 +1,67 @@
+<!--Registration form-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: #fff5f5; padding: 18px; border-radius: 8px; max-width: 60opx;">
+        <h3 style="color: blue; text-align: center;">REGISTRATION FORM</h3>
+
+        <form style="color: black;">
+            <div style="margin-bottom: 12px;">
+                <label for="first-name" style="display: block; margin-bottom: 5px;"><strong>First Name:</strong></label><input type="text" id="first-name" placeholder="Enter your first name"
+                style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+            </div>
+
+            <div style="margin-bottom: 12px;">
+                <label for="last-name" style="display: block; margin-bottom: 5px;"><strong>Last Name:</strong></label><input type="text" id="last-name" placeholder="Enter your last name"
+                style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+            </div>
+
+            <div style="margin-bottom: 12px;">
+                <label for="email" style="display: block; margin-bottom: 5px;">
+                    <strong>Email:</strong>
+                </label>
+                <input type="email" id="email-input" placeholder="your@example.com" style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+            </div>
+            
+            <div style="margin-bottom: 12px;">
+                <label for="Age" style="display: block; margin-bottom: 5px;"><strong>Age:</strong></label>
+                <input type="number" id="number-input" placeholder="Enter your age" style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+            </div>
+
+            <div style="margin-bottom: 12px;">
+                <label for="Password" style="display: block; margin-bottom: 5px;"><strong>Password:</strong></label>
+                <input type="password" id="password-input" placeholder="Enter your password" style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+            </div>
+
+            <fieldset style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px; margin-bottom: 12px;">
+                <legend><strong>Gender (select one)</strong></legend>
+                <div>
+                    <p><label><input type="radio" name="Gender" value="Male"> Male</label></p>
+                    <p><label><input type="radio" name="Gender" value="Female"> Female</label></p>
+                </div>
+            </fieldset>
+
+            <fieldset style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px; margin-bottom: 12px;">
+                <legend><strong>Interest</strong></legend>
+                <div>
+                    <p><label><input type="checkbox" name="languages" value="JavaScript"> JavaScript</label></p>
+                    <p><label><input type="checkbox" name="languages" value="Python"> Python</label></p>
+                    <p><label><input type="checkbox" name="languages" value="HTML"> HTML</label></p>
+                    <p><label><input type="checkbox" name="languages" value="CSS"> CSS</label></p>
+                    <p><label><input type="checkbox" name="languages" value="React"> React</label></p>
+                </div>
+            </fieldset>
+
+            <div style="margin-bottom: 12px;">
+                <label for="country" style="display: block; margin-bottom: 5px;"></label>
+            </div>
+                
+        </form>
+    </div>
+</body>
+</html>

@@ -64,8 +64,59 @@
                     style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 5px;" placeholder="your.email@example.com">
         </div>
 
-        <div>
-            
+        <div style="margin-bottom: 15px;">
+            <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold; color: black;">Message:</label><textarea name="message" id="message" rows="4"
+                        style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 5px;" placeholder="write your message here..."></textarea>
         </div>
+
+        <button type="submit"
+                style="background-color: #3498db; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Send Message
+        </button>
     </form>
+</div>
+
+<!--Input Types-->
+<div style="background-color: #fff5f5; padding: 20px; border-radius: 10px; max-width: 600px;">
+    <h3 style="color: #e74c3c;">HTML5 Input Types Demo</h3>
+
+    <form style="color: black;">
+        <table style="width: 100%; border-spacing: 10px;">
+            <tr>
+                <td><label for="text-input"><strong>Text:</strong></label></td>
+                <td><input type="text" id="text-input" placeholder="Regular text"
+                            style="padding: 8px; border: 1px solid#ddd; border-radius: 4px; width: 100%;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password-input"><strong>Password:</strong></label></td>
+                <td><input type="password" id="password-input" placeholder="Enter password"
+                            style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email-input"><strong>Email:</strong></label></td>
+                <td><input type="email" id="email-input" placeholder="user@example.com"
+                            style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="date-input"><strong>Date:</strong></label></td>
+                <td><input type="date" id="date-input"
+                            style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="color-input"><strong>Color:</strong></label></td>
+                <td><input type="color" id="color-input" value="#3498db" 
+                            style="border: 1px solid #ddd; border-radius: 4px; width: 60px; height: 35px;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="range-input"><strong>Range:</strong></label></td>
+                <td><input type="range" id="range-input" min="0" max="100" value="50" width="100%"></td>
+            </tr>
+        </table>
+    </form>
+
 </div>
