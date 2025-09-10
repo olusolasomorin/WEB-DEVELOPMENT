@@ -7,38 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="background-color: #fff5f5; padding: 18px; border-radius: 8px; max-width: 60opx;">
+    <div style="background-color: #fff5f5; padding: 18px; border-radius: 8px; max-width: 600px;">
         <h3 style="color: blue; text-align: center;">REGISTRATION FORM</h3>
 
         <form style="color: black;">
             <div style="margin-bottom: 12px;">
                 <label for="first-name" style="display: block; margin-bottom: 5px;"><strong>First Name:</strong></label><input type="text" id="first-name" placeholder="Enter your first name"
-                style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+                style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px;">
             </div>
 
             <div style="margin-bottom: 12px;">
-                <label for="last-name" style="display: block; margin-bottom: 5px;"><strong>Last Name:</strong></label><input type="text" id="last-name" placeholder="Enter your last name"
-                style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+                <label for="last-name" style="display: block; margin-bottom: 5px; "><strong>Last Name:</strong></label><input type="text" id="last-name" placeholder="Enter your last name"
+                style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px;">
             </div>
 
             <div style="margin-bottom: 12px;">
                 <label for="email" style="display: block; margin-bottom: 5px;">
                     <strong>Email:</strong>
                 </label>
-                <input type="email" id="email-input" placeholder="your@example.com" style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+                <input type="email" id="email-input" placeholder="your@example.com" style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px;">
             </div>
             
             <div style="margin-bottom: 12px;">
                 <label for="Age" style="display: block; margin-bottom: 5px;"><strong>Age:</strong></label>
-                <input type="number" id="number-input" placeholder="Enter your age" style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+                <input type="number" id="number-input" placeholder="Enter your age" style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px;">
             </div>
 
             <div style="margin-bottom: 12px;">
                 <label for="Password" style="display: block; margin-bottom: 5px;"><strong>Password:</strong></label>
-                <input type="password" id="password-input" placeholder="Enter your password" style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+                <input type="password" id="password-input" placeholder="Enter your password" style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px;">
             </div>
 
-            <fieldset style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px; margin-bottom: 12px;">
+            <fieldset style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px; margin-bottom: 12px;">
                 <legend><strong>Gender (select one)</strong></legend>
                 <div>
                     <p><label><input type="radio" name="Gender" value="Male"> Male</label></p>
@@ -46,7 +46,7 @@
                 </div>
             </fieldset>
 
-            <fieldset style="width: 70%; padding: 8px; border: 1px solid black; border-radius: 4px; margin-bottom: 12px;">
+            <fieldset style="width: 95%; padding: 8px; border: 1px solid black; border-radius: 4px; margin-bottom: 12px;">
                 <legend><strong>Interest</strong></legend>
                 <div>
                     <p><label><input type="checkbox" name="languages" value="JavaScript"> JavaScript</label></p>
@@ -58,8 +58,21 @@
             </fieldset>
 
             <div style="margin-bottom: 12px;">
-                <label for="country" style="display: block; margin-bottom: 5px;"></label>
+                <label for="country" style="display: block; margin-bottom: 5px; font-weight: bold;">Country:</label>
+                <select name="country" id="country" style="width: 98%; padding: 8px; border: 1px solid black; border-radius: 4px;">
+                    <option value="">Select your country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="ng">Nigeria</option>
+                    <option value="gh">Ghana</option>
+                    <option value="ke">Kenya</option>
+                </select>
             </div>
+
+            <center><button type="submit" style="background-color: blue; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+                Submit
+            </button></center>
                 
         </form>
     </div>
