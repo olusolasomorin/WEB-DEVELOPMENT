@@ -50,6 +50,59 @@
             color: #666;
             margin-top: 10px;
         }
+
+        .position-demo {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            min-height: 200px;
+            color: black;
+        }
+
+        .static-box {
+            position: static;
+            background-color: #6c755d;
+            display: inline-block;
+        }
+
+        .demo-box {
+            width: 80px;
+            height: 60px;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .relative-box {
+            position: relative;
+            background-color: #17a2b8;
+            top: 20px;
+            left: 30px;
+            display: inline-block;
+            color: black;
+        }
+
+        .demo-container {
+            position: relative;
+            background-color: #e9ecef;
+            height: 150px;
+            border: 2px dashed #6c757d;
+            margin: 10px 0;
+        }
+
+        .absolute-box {
+            position: absolute;
+            background-color: #dc3545;
+            top: 20px;
+            right: 20px;
+        }
+
+        .static-box, .relative-box {
+        vertical-align: top;
+        }
     </style>
 </head>
 <body>
@@ -84,6 +137,23 @@
                 This element has margin-top: 30px<br>
                 <small>Gap above = 30px (larger margin wins)</small>
             </div>
+        </div>
+    </div>
+
+    <h3>CSS Positioning in Action</h3>
+
+    <div class="position-demo">
+        <h4>Static vs Relative Positioning</h4>
+        <div class="static-box demo-box">Static</div>
+        <div class="relative-box demo-box">Relative</small></div>
+        <p><small>Relative keeps original space but moves visually</small></p>
+    </div>
+
+    <div class="position-demo">
+        <h4>Absolute Positioning</h4>
+        <div class="demo-container">
+            <p>This container has position: relative (positioning context)</p>
+            <div class="absolute-box demo-box">Absolute</div>
         </div>
     </div>
 </body>
