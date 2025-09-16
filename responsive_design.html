@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            color: black;
+        }
+
+        .box-comparison {
+            display: inline-block;
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            border: 3px solid #3498db;
+            background-color: #ecf0f1;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            background-color: #ffebee;
+            border-color: #e74c3c;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            background-color: #e8f5e8;
+            border-color: #27ae60;
+        }
+
+        .margin-demo {
+            background-color: #fff3cd;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .margin-top { margin-top: 30px; }
+        .margin-bottom { margin-bottom: 20px; }
+        
+        .size-info {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>Box-Sizing Comparison</h4>
+        <p>Both boxes have width: 200px, padding: 20px, border: 3px</p>
+
+        <div class="box-comparison content-box">
+            <strong>Content-Box</strong><br>
+            Default behavior<br>
+            <div class="size-info">
+                Total width: 246px<br>
+                (200 + 40 + 6)
+            </div>
+        </div>
+
+        <div class="box-comparison border-box">
+            <strong>Border-Box</strong><br>
+            Modern approach<br>
+            <div class="size-info">
+                Total width: 200px<br>
+                (padding/border inside)
+            </div>
+        </div>
+
+        <div class="container">
+            <h4>Margin Collapsing</h4>
+            <div class="margin-demo margin-bottom">
+                This element has margin-bottom: 20px
+            </div>
+            <div class="margin-demo margin-top">
+                This element has margin-top: 30px<br>
+                <small>Gap above = 30px (larger margin wins)</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
