@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* stlye for buttons */
+.container {
+    background-color: #FAF9F6;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#about {
+    padding: 15px 30px;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 6px;
+    background-color: white;
+}
+
+#contact {
+    padding: 15px 30px;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 6px;
+    background-color: white;
+}
+
+#skill {
+    padding: 15px 30px;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 6px;
+    background-color: white;
+}
+
+#about:hover {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+#contact:hover {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+#skill:hover {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+/* styles for contents */
+/* .content {
+    
+} */
+
+#about-me {
+    padding: 24px;
+    font-size: 20px;
+    font-family: serif;
+}
+
+#contact-me {
+    padding: 24px;
+    font-size: 20px;
+    font-family: serif;
+    display: none;
+}
+
+#my-skill {
+    padding: 24px;
+    font-size: 20px;
+    font-family: serif;
+    display: none;
+}
