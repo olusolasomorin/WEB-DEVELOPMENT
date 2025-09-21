@@ -4,38 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
     <!-- nav bar -->
     <header>
-        <div class="logo">MyDashboard</div>
+        <div class="logo">
+            <i class="fa-solid fa-book"></i>
+            EduArchive
+        </div>
 
         <ul class="menu-list">
-            <li class="list">Home</li>
+            <li class="list" style="color: #0000ff;">Home</li>
             <li class="list">Analytics</li>
             <li class="list">Settings</li>
             <li class="list">Profile</li>
         </ul>
 
     </header>
-    <div class="hero-sec">
+    <!-- <div class="hero-sec">
         <div class="hero">
             <h3>Welcome to Your Dashboard</h3>
         </div>
-    </div>
+    </div> -->
     
     <div class="conts">
         <div class="side-bar">
-            <h4 class="sections">Dashboard (overview)</h4>
-            <h4 class="sections">Analytics</h4>
-            <h4 class="sections">Projects</h4>
-            <h4 class="sections">Messages</h4>
-            <h4 class="sections">Settings</h4>
-            <h4 class="sections">Log out</h4>
+            <button class="sections" style="background-color: #e0f2fa; border-right: 2px solid #2828c2; color: #0000ff;">
+                <i class="fa-regular fa-house"></i>
+                Dashboard
+            </button>
+            <button class="sections">
+                <i class="fa-regular fa-file"></i>
+                Project
+            </button>
+            <button class="sections">
+                <i class="fa-solid fa-download"></i>
+                Submit Project
+            </button>
+            <button class="sections">
+                <i class="fa-regular fa-message"></i>
+                Messages
+            </button>
+            <button class="sections">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </button>
+            
         </div>
         <div class="main-content">
-            <h4>Main content</h4>
+            <div class="hero">
+                <div>
+                    <h4 class="hero-head-text">
+                        Welcome back, John Smith!
+                    </h4>
+                    <p>
+                        Track your project progress and submissions
+                    </p>
+                </div>
+
+                <div>
+                    <p style="padding-top: 18px; padding-bottom: 4px;">
+                        Computer Science
+                    </p>
+                    <p style="font-size: 14px; text-align: right;">
+                        University of lagos
+                    </p>
+                </div>
+            </div>
+
+            <div class="main-body">
+                <div class="main-body-text">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <p style="font-weight: 550;">My Project Metrics</p>
+                    <i class="fa-solid fa-wifi"></i>
+                    <p style="font-size: 14px; padding-top: 4px; color: #0ddd30;">Online</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card1">
+                    <p style="color: #969595; font-size: 20px; padding-bottom: 10px;">
+                        Total Active Projects
+                    </p>
+                    <p style="font-weight: bolder; font-size: 40px;">
+                        2
+                    </p>
+                </div>
+
+                <div class="card1">
+                    <p style="color: #969595; font-size: 20px; padding-bottom: 10px;">
+                        Pending Review Projects
+                    </p>
+                    <p style="font-weight: bolder; font-size: 40px;">
+                        4
+                    </p>
+                </div>
+
+                <div class="card1">
+                    <p style="color: #969595; font-size: 20px; padding-bottom: 10px;">
+                        Approved Projects
+                    </p>
+                    <p style="font-weight: bolder; font-size: 40px;">
+                        1
+                    </p>
+                </div>
+            </div>
+
+            <div class="analytics">
+                <p style="font-weight: 550;">
+                    Analytics
+                </p>
+
+                <div id="curve_chart" style="width: 90%; height: 500px"></div>
+            </div>
         </div>
     </div>
 </body>
