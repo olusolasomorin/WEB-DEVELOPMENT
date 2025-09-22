@@ -2,7 +2,7 @@ function createPersonalInfo() {
     const firstName = "Central";
     const lastName = "Cee";
     const age = 24;
-    const isStudent = true;
+    const isStudent = false;
     const favoriteColor = "red";
     
     // Calculate future age
@@ -17,7 +17,6 @@ function createPersonalInfo() {
             <p><strong>Student Status:</strong> ${isStudent ? 'Yes, I am a student' : 'No, I am not a student'}</p>
             <p><strong>Favorite Color:</strong> ${favoriteColor}</p>
             <p><strong>In 5 years:</strong> I will be ${futureAge} years old</p>
-            <p><strong>Fun Fact:</strong> My name has ${firstName.length + lastName.length} letters total!</p>
         </div>
     `;
     

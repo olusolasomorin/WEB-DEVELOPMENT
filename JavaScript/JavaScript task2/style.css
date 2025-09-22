@@ -1,0 +1,24 @@
+.container {
+    background-color: #FAF9F6;
+    padding: 24px;
+    border: 2px solid #fad975;
+    border-radius: 6px;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    border: none;
+
+}
+
+.output {
+    padding: 24px;
+    background-color: #1d0bb8;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 6px solid #0c0c0c;
+    color: white;
+}
