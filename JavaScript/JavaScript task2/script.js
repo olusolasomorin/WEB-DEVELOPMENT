@@ -24,3 +24,8 @@ function runCalculator() {
 
     document.getElementById('operation-output').innerHTML = output;
 }
+
+function greetPerson(name) {
+    console.log(`Hello, ${name}! Welcome to JavaScript!`);
+}
+
