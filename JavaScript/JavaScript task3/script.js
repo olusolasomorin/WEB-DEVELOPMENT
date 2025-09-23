@@ -95,40 +95,61 @@ console.log(`Final price: $${result.finalPrice}`)
 // **Challenge:** Add a ternary operator for quick advice like:  
 //    `"Bring an umbrella"` if raining, otherwise `"No umbrella needed"`.
 
-// function weatherAdvice(temperature, isRaining) {
-//     if (temperature < 32 && isRaining) {
-//         return "Freezing rain! Stay inside!"
-//     } else if (temperature < 32) {
-//         return "Very cold, wear a heavy coat."
-//     } else if (temperature > 32 && temperature <60) {
-//         return "Chilly, bring a jacket."
-//     } else if (temperature > 80 && isRaining) {
-//         return "It's hot, stay hydrated!"
-//     }
-    
-//     // isRaining = true
-//     advice = isRaining ? 'Bring umbrella': 'Umbrella not needed'
-//     console.log(advice)
-// }
-// // console.log(weatherAdvice(30, false))
-// weatherAdvice(37, true)
-
-
-function weatherAdvice(temperature, isRaining){
-    if (temperature< 32 && isRaining){
+function weatherAdvice(temperature, isRaining) {
+    if (temperature < 32 && isRaining) {
         console.log("Freezing rain! Stay inside!")
-    }
-    else if(temperature < 32){
+    } else if (temperature < 32) {
         console.log("Very cold, wear a heavy coat.")
-    } else if(temperature >= 32 && temperature <= 60){
+    } else if (temperature > 32 && temperature <60) {
         console.log("Chilly, bring a jacket.")
-    } else if(temperature >= 60 && temperature <= 80){
-        console.log("Nice weather!")
-    } else{
+    } else if (temperature > 60 && temperature < 80) {
         console.log("It's hot, stay hydrated!")
     }
-    advice = isRaining ? "Bring an Umbrella" : "No umbrella needed"
+    let advice = isRaining ? 'Bring umbrella': 'Umbrella not needed'
     console.log(advice);
 }
-weatherAdvice(30, true)
-console.log("")
+weatherAdvice(70, true)
+console.log('')
+
+
+// ## 🎯 Practice Exercise 4
+
+// **Task:** ATM Simulation  
+
+// **Requirements:**  
+// 1. Create a function `atm(balance, action, amount)`  
+// 2. If action is `"withdraw"`, check if balance is enough:  
+//    - If yes, subtract amount and return new balance  
+//    - If no, return `"Insufficient funds"`  
+// 3. If action is `"deposit"`, add amount to balance and return new balance  
+// 4. Use clear messages in template literals  
+
+// **Challenge:** Add a condition that blocks withdrawals over 500 at once.
+
+function atm(balance, action, amount) {
+    if (action === "withdraw") {
+        if (amount > 500) {
+            return "Limit exceeded!";
+        } if (amount > balance) {
+            return "insufficient funds!";
+        } else 
+            amount -= balance; {
+            return "Transaction successful.";
+        }
+
+    } else if (action === "deposit") {
+        balance += amount;
+        return `Deposit successful. You deposited $${amount}. New balance is $${balance}.`;
+    } else {
+        return "Invalid action! Chose withdraw or deposit.";
+    }
+
+    
+}
+console.log(atm(100, 'deposit', 500));
+let balance = 100;
+
+let action = prompt("Welcome to SPIE Bank. Do you want to 'withdraw' or 'deposit'");
+let amount = parseFloat(prompt("Enter amount:"));
+let results = atm(balance, action.toLowerCase(), amount);
+alert(results);
