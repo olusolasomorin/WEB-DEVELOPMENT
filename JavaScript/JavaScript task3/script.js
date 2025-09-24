@@ -146,7 +146,7 @@ function atm(balance, action, amount) {
 
     
 }
-console.log(atm(100, 'deposit', 500));
+console.log(atm(1000, 'deposit', 500));
 let balance = 100;
 
 let action = prompt("Welcome to SPIE Bank. Do you want to 'withdraw' or 'deposit'");
@@ -183,7 +183,7 @@ function personalAssistant(time, weather, dayType) {
         } else if (dayType === "holiday") {
             console.log("Good morning! Enjoy your holiday.");
         }
-    } else if (time >= 12 && time <= 15) {
+    } else if (time >= 12 && time <= 16) {
         if (dayType === "workday") {
             console.log("Good afternoon! Hope work is going well.");
         } else if (dayType === "weekend") {
@@ -191,7 +191,7 @@ function personalAssistant(time, weather, dayType) {
         } else if (dayType === "holiday") {
             console.log("Good afternoon! I hope you are make a good use of your holiday.");
         }
-    } else if (time >= 16 && time <= 21) {
+    } else if (time >= 17 && time <= 21) {
         if (dayType === "workday") {
             console.log("Wagwan! It's time to rest");
         } else if (dayType === "weekend") {

@@ -124,3 +124,177 @@ function exploreStrings() {
         
     `
 }
+
+
+// Arrays and Loops
+
+// Creating arrays with square brackets []
+let fruits = ["apple", "banana", "orange", "grape"];
+let numbers = [10, 25, 30, 45, 50];
+let booleans = [true, false, true, true];
+let mixedArray = ["John", 25, true, "student"];
+
+// Empty array
+let emptyArray = [];
+
+// Display the arrays
+console.log("Fruits array:", fruits);
+console.log("Numbers array:", numbers);
+console.log("Mixed array:", mixedArray);
+console.log("Empty array:", emptyArray);
+
+console.log(""); // Empty line
+
+// Array length property
+console.log("Number of fruits:", fruits.length);
+console.log("Number of numbers:", numbers.length);
+console.log("Empty array length:", emptyArray.length);
+
+console.log(""); // Empty line
+
+// Accessing individual elements with index [0, 1, 2, ...]
+console.log("First fruit:", fruits[0]);     // apple
+console.log("Second fruit:", fruits[1]);    // banana
+console.log("Last fruit:", fruits[fruits.length - 1]); // grape
+
+console.log("First number:", numbers[0]);   // 10
+console.log("Third number:", numbers[2]);   // 30
+
+// What happens with invalid indexes?
+console.log("Index that doesn't exist:", fruits[10]); // undefined
+
+
+// Modifying Arrays
+let colors = ["red", "green", "blue"];
+console.log("Original colors:", colors);
+
+// Changing existing elements
+colors[0] = 'purple';
+colors[2] = 'yelllow';
+console.log("After changes:", colors);
+
+console.log('');
+
+// Adding elements to the end with push()
+let shoppingList = ['milk', 'bread'];
+console.log('Original List:', shoppingList);
+
+shoppingList.push('eggs');
+shoppingList.push('cheese', 'butter');  // Can add multiple items
+console.log('After adding items:', shoppingList);
+
+console.log('')
+
+// Removing the last element with pop()
+let removedItem = shoppingList.pop();  // Removing the last element with pop()
+console.log('Removed item:', removedItem);
+console.log('List after removing:', shoppingList);
+
+console.log(""); // Empty line
+
+// Adding elements to the beginning with unshift()
+shoppingList.unshift('apples');
+console.log("After adding to front:", shoppingList);
+
+// Removing the first element with shift()
+let firstItem = shoppingList.shift();
+console.log("Removed first item:", firstItem);
+console.log('Final list:', shoppingList)
+
+console.log(""); // Empty line
+
+// Finding elements
+let students =['Alice', 'Bob', 'Charlie', 'Diana'];
+console.log('Students:', students);
+console.log('Is Bob in class?', students.includes('Bob'));
+console.log('Where is Charlie?', students.indexOf('Charlie'));
+console.log("Where is Frank?", students.indexOf('Frank')); // -1 means not found
+
+console.log(""); // Empty line
+
+// More Array Methods
+let number = [1, 2, 3, 4, 5];
+let names = ['John', 'Jane', 'Bob', 'Alice'];
+console.log("Original number:", number);
+console.log('Original names:', names);
+
+console.log(""); // Empty line
+
+// slice() - Get a portion of the array (doesn't change original)
+let firstThree = number.slice(0, 3);  // Get items 0, 1, 2
+let lastTwo = number.slice(-2);  // Get last 2 items
+console.log("First three numbers:", firstThree);
+console.log("Last two numbers:", lastTwo);
+console.log("Original unchanged:", number);
+
+console.log(""); // Empty line
+
+// splice() - Remove/add items at specific position (changes original)
+let fruit = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
+console.log('Original fruits;', fruit);
+
+// Remove 2 items starting at index 1
+let removed = fruit.splice(1, 2);
+console.log("Removed items:", removed);
+console.log("After removal:", fruit);
+
+// Add items at index 1
+fruit.splice(1, 0, 'mango', 'pineapple'); // Remove 0, add 2 items
+console.log("After adding:", fruit);
+
+console.log(""); // Empty line
+
+// join() - Convert array to string
+let words = ['Hello', 'from', 'JavaScript'];
+let sentence = words.join(' ')  // Join with spaces
+let csv = words.join(',');  // Join with commas
+console.log("Words array:", words);
+console.log("As sentence:", sentence);
+console.log("As CSV:", csv);
+
+console.log(""); // Empty line
+
+// split() - Convert string to array (string method, but creates arrays)
+let message = 'apple,banana,orange';
+let fruitArray = message.split(',');
+console.log("String:", message);
+console.log("Split into array:", fruitArray);
+
+console.log(""); // Empty line
+
+// reverse() - Reverse array order (changes original)
+let countdown = [1, 2, 3, 4, 5];
+console.log("Original countdown:", countdown);
+countdown.reverse();
+console.log("Reversed countdown:", countdown);
+
+
+// Loops
+// Basic for loop structure:
+// for (initialization; condition; increment) {
+//     code to repeat
+// }
+
+// Simple counting loop
+console.log("Counting from 1 to 5:");
+for (let i = 1; i <= 5; i++) {
+    console.log("Count:", i);
+}
+
+console.log('');
+
+// Counting backwards
+console.log("Countdown from 5 to 1:");
+for (let i = 5; i >= 1; i--) {
+    console.log('Countdown:', i);
+}
+console.log('Blast off!');
+
+console.log('');
+
+// Using loops with calculations
+console.log('Multiplication table for 3:');
+for (let i = 1; i <= 10; i++) {
+    let result = 3 * i;
+    console.log(`3 x ${i} = ${result}`);
+}
