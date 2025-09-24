@@ -173,3 +173,35 @@ alert(results);
 // - Use a ternary operator for simple decisions
 // - Return helpful, personalized advice
 // - Handle edge cases (invalid inputs)
+
+function personalAssistant(time, weather, dayType) {
+    if (time >= 5 && time <= 11) {
+        if (dayType === "workday") {
+            console.log("Good morning! It's new day to be at work");
+        } else if (dayType === "weekend") {
+            console.log("Good morning! Oh it's weekend already. Enjoy your weekend.");
+        } else if (dayType === "holiday") {
+            console.log("Good morning! Enjoy your holiday.");
+        }
+    } else if (time >= 12 && time <= 15) {
+        if (dayType === "workday") {
+            console.log("Good afternoon! Hope work is going well.");
+        } else if (dayType === "weekend") {
+            console.log("Good afternoon! Trust your weekend is going well.");
+        } else if (dayType === "holiday") {
+            console.log("Good afternoon! I hope you are make a good use of your holiday.");
+        }
+    } else if (time >= 16 && time <= 21) {
+        if (dayType === "workday") {
+            console.log("Wagwan! It's time to rest");
+        } else if (dayType === "weekend") {
+            console.log("Yoo! I think clubing will be nice.");
+        } else if (dayType === "holiday") {
+            console.log("You fit lodge one nice babe in a 5star hotel");
+        }
+    }
+
+    let advice = weather === "sunny" ? "It's sunny, wear something light" : weather === "rainy" ? "It's rainy, take an umbrella" : "The weather is favourable today."
+    console.log(advice)
+}
+personalAssistant(6, "rainy", "weekend")
