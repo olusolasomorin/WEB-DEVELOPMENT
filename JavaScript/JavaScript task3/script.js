@@ -153,3 +153,23 @@ let action = prompt("Welcome to SPIE Bank. Do you want to 'withdraw' or 'deposit
 let amount = parseFloat(prompt("Enter amount:"));
 let results = atm(balance, action.toLowerCase(), amount);
 alert(results);
+
+
+// ## 🎯 Practice Exercise 5
+// **Tast:** Personal Assistant Function
+
+// Now let's combine everything you've learned to create a "personal assistant" function that makes smart decisions based on different inputs.
+
+// **Your Mission:**
+// Create a function called `personalAssistant` that:
+// 1. Takes parameters for: time (hour), weather(sunny, rainy,cloudy), and day type(workday, weekend, holiday)
+// 2. Uses conditional logic to give appropriate advice
+// 3. Returns different messages based on the conditions
+// 4. Handles various scenarios intelligently
+
+// **Requirements:**
+// - Use if/else statements for complex logic
+// - Include at least one logical operator (&&, ||, !)
+// - Use a ternary operator for simple decisions
+// - Return helpful, personalized advice
+// - Handle edge cases (invalid inputs)
