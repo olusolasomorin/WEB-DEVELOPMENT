@@ -298,3 +298,175 @@ for (let i = 1; i <= 10; i++) {
     let result = 3 * i;
     console.log(`3 x ${i} = ${result}`);
 }
+
+console.log('')
+
+// Loop with different step sizes
+console.log("Even numbers from 2 to 10:");
+for (let i = 2; i <= 10; i += 2) {
+    // i += 2 means i = i + 2
+    console.log("Even number:", i);
+}
+
+console.log('');
+
+// Loop through an array using index
+let color = ['red', 'green', 'blue', 'yellow'];
+console.log("Colors in the array;");
+for (let i = 0; i < color.length; i++) {
+    console.log(`color ${i + 1}: ${color[i]}`);
+}
+console.log('')
+
+// for...Of loop - easier way to go through array items
+let Fruits = ['apple', 'banana', 'orange', 'grape'];
+
+console.log("Using for...Of loop:");
+for (let Fruit of Fruits) {
+    console.log("I like", Fruit);
+}
+
+console.log('');
+
+// Compare with traditional for loop
+console.log("Using traditional for loop:");
+for (let i = 0; i < Fruits.length; i++) {
+    console.log('I like', Fruits[i]);
+}
+
+console.log('');
+
+// Processing numbers with for...Of
+let scores = [85, 92, 78, 96, 88];
+let total = 0;
+
+console.log("Calculating average score:");
+for (let score of scores)  {
+    console.log("Adding score:", score);
+    total += score;
+}
+
+let average = total / scores.length;
+console.log(`Total: ${total}, Average: ${average.toFixed(1)}`);
+
+console.log('');
+
+// Using loops with conditions
+let temperatures = [68, 72, 85, 90, 75, 82, 88];
+let hotDays = 0;
+let coldDays = 0;
+
+console.log("Analyzing temperatures:");
+for (let temp of temperatures) {
+    if (temp >= 85) {
+        hotDays++;
+        console.log(`${temp}°F - Hot day!`);
+    } else if (temp < 70) {
+        coldDays++;
+        console.log(`${temp}°F - Cold day!`);
+    } else {
+        console.log(`${temp}°F - Nice day!`);
+    }
+}
+
+console.log(`Summary: ${hotDays} hot days, ${coldDays} cold days`);
+
+console.log('');
+
+// Building new arrays with loops
+let Numbers = [1, 2, 3, 4, 5];
+let doubled = [];
+
+console.log("Doubling each number:");
+for (let num of Numbers) {
+    let doubledValue = num * 2;
+    doubled.push(doubledValue);
+    console.log(`${num} x 2 = ${doubledValue}`);
+}
+
+console.log("Original:", Numbers);
+console.log("Doubled:", doubled);
+
+console.log('');
+
+
+
+// While Loops
+
+// While loop - repeats as long as condition is true
+// while (condition) {
+//     code to repeat
+// }
+
+console.log("Basic while loop - counting to 5:");
+let count = 1;
+while (count <= 5) {
+    console.log("Count is:", count);
+    count++  // IMPORTANT: Must change the condition variable!
+}
+
+console.log("");
+
+// While loop processing array until condition met
+let numbs = [2, 4, 6, 8, 10, 12];
+let i = 0;
+let foundOdd = false;
+
+console.log("Looking for first odd number:");
+while (i < numbs.length && !foundOdd) {
+    console.log(`Checking ${numbs[i]}...`);
+
+    if (numbs[i] % 2 === 1) {
+        // check if odd
+        console.log(`Found odd number: ${numbs[i]}`);
+        foundOdd = true;
+    } else {
+        console.log(`${numbs[i]} is even, continuing...`);
+    }
+
+    i++;
+}
+
+if (!foundOdd) {
+    console.log("No odd numbers found!");
+}
+
+console.log('');
+
+// do...while loop - runs at least once
+let nums = 1;
+do {
+    console.log("Number is:" + nums);
+    nums++;
+}while (nums <= 3);
+
+console.log("Loop finished!");
+console.log('');
+
+// Array methods that use functions
+// Modern array methods that make processing easier
+let numbre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log("Original numbers:", numbre);
+console.log('');
+
+// forEach() - Do something with each element
+console.log("Using forEach to print each number:");
+numbre.forEach(function(numbres) {
+    console.log("Number:", numbres);
+});
+
+console.log('');
+
+// More concise with arrow function
+console.log("forEach with arrow function:");
+numbre.forEach(numbres => console.log(`Value: ${numbres}`));
+
+console.log('');
+
+// map() - Transform each element and create new array
+console.log("Using map to double each number:");
+let doubles = numbre.map(function(numbres) {
+    return numbres * 2;
+});
+console.log("Doubled:", doubles)
