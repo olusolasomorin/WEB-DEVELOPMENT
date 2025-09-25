@@ -469,4 +469,27 @@ console.log("Using map to double each number:");
 let doubles = numbre.map(function(numbres) {
     return numbres * 2;
 });
-console.log("Doubled:", doubles)
+console.log("Doubled:", doubles);
+
+// Shorter arrow function version
+let tripled = numbre.map(numbres => numbres * 3);
+console.log ("Tripled:", tripled);
+
+console.log("");
+
+// filter() - Keep only elements that meet condition
+console.log("Using filter to get even numbers:");
+let evenNumbers = numbre.filter(function(numbres) {
+    return numbres % 2 === 0;
+});
+console.log("Even numbers:", evenNumbers);
+
+// Get odd numbers with arrow function
+let oddNumbers = numbre.filter(numbres => numbres % 2 === 1);
+console.log("Odd numbers:", oddNumbers);
+
+console.log("");
+
+// find() - Get first element that meets condition
+let firstBigNumber = numbre.find(numbres => numbres > 5);
+console.log("First number > 5:", firstBigNumber);
