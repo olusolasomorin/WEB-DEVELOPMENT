@@ -149,10 +149,10 @@ function atm(balance, action, amount) {
 console.log(atm(1000, 'deposit', 500));
 let balance = 100;
 
-let action = prompt("Welcome to SPIE Bank. Do you want to 'withdraw' or 'deposit'");
-let amount = parseFloat(prompt("Enter amount:"));
-let results = atm(balance, action.toLowerCase(), amount);
-alert(results);
+// let action = prompt("Welcome to SPIE Bank. Do you want to 'withdraw' or 'deposit'");
+// let amount = parseFloat(prompt("Enter amount:"));
+// let results = atm(balance, action.toLowerCase(), amount);
+// alert(results);
 
 
 // ## 🎯 Practice Exercise 5
@@ -205,3 +205,75 @@ function personalAssistant(time, weather, dayType) {
     console.log(advice)
 }
 personalAssistant(6, "rainy", "weekend")
+
+
+// ## 🎯 Practice Exercise 6
+
+// **Task:** Apply Common Function Patterns  
+
+// **Requirements:**  
+// 1. Create a **validation function** `isStrongPassword(password)` that checks:  
+//    - At least 8 characters  
+//    - Contains a number  
+//    - Contains a special character  
+// 2. Create a **formatter function** `formatPercentage(value)` that always shows one decimal place with `%`.  
+// 3. Create a **calculator function** `calculateCompoundInterest(principal, rate, years)` using the formula:  
+//    \[
+//    A = P \times (1 + r)^t
+//    \]  
+// 4. Create a **decision maker function** `canGraduate(credits, gpa)` that:  
+//    - Requires at least 120 credits  
+//    - Requires GPA ≥ 2.0  
+// 5. Create a **utility function** `reverseWords(sentence)` that takes a string and returns the sentence with the words reversed.  
+
+// **Challenge:** Extend `reverseWords` to also capitalize the first letter of each word.  
+
+// 1
+function isStrongPassword(password) {
+    const hasLength = password.length >= 8;
+    const hasNumber = /[123456789]/.test(password);
+    const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (hasLength === false) {
+        return "Password must be at least 8 characters";
+    } else if (hasNumber === false) {
+        return "Password must have at least a number"
+    } else if (hasSpecial === false) {
+        return "Password should have at least a special character"
+    } else {
+        return "Password created successfully"
+    }
+}
+console.log('');
+console.log(isStrongPassword('somorin@1'))
+
+// 2
+function formatPercentage(value) {
+    return `${value.toFixed(1)}%`
+}
+console.log(formatPercentage(75))
+
+// 3
+function calculateCompoundInterest(principal, rate, years) {
+    let A = principal * (1 + rate)**years
+    return `${A.toFixed(2)}`
+}
+console.log(calculateCompoundInterest(50000, 0.08, 3));
+
+// 4
+function canGraduate(credits, gpa) {
+    if (credits >= 120 && gpa >= 2.0) {
+        return "You can graduate"
+    } else {
+        return "You cannot graduate due to low Credits or GPA"
+    }
+}
+console.log(canGraduate(150, 3.0))
+
+// 5
+function reverseWords(sentence) {
+    let words = sentence.split(" ")
+    let sentences = words.reverse()
+    return sentences
+}
+console.log(reverseWords('I love python'))
