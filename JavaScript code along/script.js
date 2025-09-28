@@ -569,3 +569,41 @@ console.log(getDiscountMessage(30, "gold"));
 console.log(getDiscountMessage(100, "gold"));
 console.log(getDiscountMessage(100, "silver"));
 console.log(getDiscountMessage(100, "regular"));
+
+
+
+// Js web function goes here
+function changeMessage() {
+    console.log("Button was clicked!");
+
+    document.getElementById('message').textContent = "JavaScript changed this text!";
+}
+console.log("Page loaded and JavaScript is working!")
+
+
+//Finding and changing HTML elements
+function changeElements() {
+    // Change text content
+    document.getElementById('title').textContent = "JavaScript Changed This Title!";
+
+    // Change HTML content (can include HTML tags)
+    document.getElementById('description').innerHTML = "<strong>This text is now bold!</strong>";
+
+    // Find element by class name
+    let infoElement = document.querySelector('.info');
+    infoElement.textContent = "Found by class name and changed!";
+
+    // Change styles
+    document.getElementById('title').style.color = "blue"
+    document.getElementById('title').style.fontStyle = "36px"
+}
+
+function addListItem() {
+    // Create a new list iten
+    let newItem = document.createElement('li');
+    newItem.textContent = 'New item add by JavaScript!'
+
+
+    // Add it to the list
+    document.getElementById('list').appendChild(newItem)
+}

@@ -297,5 +297,9 @@ function sortStudentByGrade() {
 
 // Formatted report
 function reportGenerator() {
-    console.log("")
+    console.log("==== Class Report ====")
+    console.log("Name       Grade(score)        Grade")
+    for (let student of students) {
+        console.log(`${student.name}        ${student.grade}`)
+    }
 }
