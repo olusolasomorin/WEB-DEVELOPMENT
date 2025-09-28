@@ -119,18 +119,183 @@ console.log(getPassRate(grades))
 // Sort the movies by rating (highest → lowest) and display the sorted list.
 
 let movies = ['Fast X', 'The gods must be crazy', 'Mr Bones', 'Beauty in Black']
-let ratings = [16, 13, 18]
+let ratings = [9, 9.5, 9, 10]
 
 function addMovie(movie, rating) {
-    let mov = []
-    let rated = []
-    for (let m of movies) {
-        mov.push(m)
-    }
-    for (let r of ratings) {
-        rated.push(r)
-    }
-    console.log(`Movies: ${movies}<br>Ratings: ${rating}`)
-    
+    movies.push(movie)
+    ratings.push(rating)
+    // console.log('Updated movie list:', movies)
+    // console.log('Updated movie ratings:', ratings)
 }
-console.log(addMovie('To kill a monkey', 16))
+console.log(addMovie('To kill a monkey', 10))
+console.log(movies, ratings)
+
+function getAverageRating() {
+    let total = 0;
+    for (let r of ratings) {
+        total += r;
+    }
+    let average = total / ratings.length;
+    return average.toFixed(2)
+}
+console.log(`rating; ${getAverageRating(ratings)}`)
+
+function getTopMovie() {
+    if (movies.length === 0){
+        return "No movies yet.";
+    }
+    let topMovie = movies[0];
+    let heighest = ratings[0];
+
+    let i = 0;
+    for (let high of ratings) {
+        if (high > heighest) {
+            heighest =high;
+            topMovie = movies[i];
+        }
+        i++
+    }
+    return `${topMovie} (rating: ${heighest})`
+}
+console.log(getTopMovie())
+
+// Print summary
+function printSummary(movies, ratings) {
+  console.log("🎬 Movie Ratings Summary:");
+  let mov = [];
+  let rate = [];
+  mov.push(movies)
+  rate.push(ratings)
+  for (let i = 0; i < [mov.length, rate.length]; i++) {
+        console.log(`${mov[i]}: ${rate[i]}`)
+    }
+    console.log(`${mov[i]}: ${rate[i]}`)
+//   for (let m of mov) {
+//     console.log(`${m.movies} - Rating: ${m.ratings}`);
+//   }
+    console.log(`⭐ Average Rating: ${getAverageRating()}`);
+    console.log(`🏆 Top Movie: ${getTopMovie()}`);
+}
+console.log(printSummary())
+
+
+
+// ## 🎯 Practice Exercise 4
+
+// ### Comprehensive Practice Exercise: Student Report System
+
+// Build a program that manages student grades using arrays, loops, and functions.
+
+// **Your Challenge:**  
+// Create a system with multiple functions that can:
+
+// 1. **Add Student** - Store student names and their grades in an array  
+// 2. **Calculate Average** - Compute the average grade for the class  
+// 3. **Find Top & Bottom Student** - Identify the student with the highest and lowest score  
+// 4. **Grade Categorizer** - Assign letter grades (A, B, C, D, F) based on numeric scores  
+// 5. **Report Generator** - Print a formatted class report showing:  
+//    - Each student’s name, grade, and letter grade  
+//    - Class average  
+//    - Top student  
+//    - Lowest student  
+
+// **Requirements:**  
+// - Use arrays to store multiple students  
+// - Use `for` or `for...of` loops to process data  
+// - Write at least 5 reusable functions  
+// - Validate inputs (no negative grades, no grades above 100)  
+// - Use `Math.max()` and `Math.min()` for comparisons  
+// - Return results in a well-formatted way (like a table or list)  
+
+// **Challenge:**  
+// Sort the students by grade (highest → lowest) before printing the report. 
+
+let students = [];
+
+//Add student function
+function addStudent(name, grade) {
+    if (name === '') {
+        console.log("Student name cannot be blank")
+        return 'Student name cannot be empty'
+    } else if (name === !isNaN()) {
+        console.log("Student name cannot be a number")
+        return "Student name cannot be a number"
+    }
+
+    if (grade < 0 || isNaN(grade) || grade > 100) {
+        console.log("Grade must be a number between 0 and 100")
+        return "Grade must be a number between 0 and 100"
+    }
+
+    students.push({
+        name: name.trim(),
+        grade: parseFloat(grade)
+    });
+
+    return `${name} added successfully with grade (${grade})`
+}
+
+// Calculate average function
+function calculateAverage() {
+    if (students.length === 0) {
+        return "Student list is empty"
+    }
+
+    let total = 0;
+    for (let student of students) {
+        total += student.grade;
+    }
+
+    let average = total / students.length
+
+    return `Average: ${average}`
+}
+
+// Find top student
+function findTopStudent() {
+    if (students.length === 0) {
+        return null;
+    }
+
+    let highGrade = Math.max(...students.map(student => student.grade));
+    return students.find(student => student.grade === highGrade);
+}
+
+// Find bottom student
+function findBottomStudent() {
+    if (students.length === 0) {
+        return "Empty"
+    }
+
+    let lowGrade = Math.min(...students.map(student => student.grade));
+
+    return students.find(student => student.grade === lowGrade)
+}
+
+// Grade catergorizer
+function getLetterGrade(numGrade) {
+    if (numGrade >= 75) {
+        return 'A';
+    } else if (numGrade >= 60) {
+        return 'B';
+    } else if (numGrade >= 50) {
+        return 'C'
+    } else if (numGrade >= 45) {
+        return 'D'
+    } else if (numGrade >= 40) {
+        return 'E'
+    } else {
+        return 'F'
+    }
+}
+
+// Sort student
+function sortStudentByGrade() {
+    return [...students].sort((a, b) => b.grade - a.grade);
+}
+
+
+// Formatted report
+function reportGenerator() {
+    console.log("")
+}
