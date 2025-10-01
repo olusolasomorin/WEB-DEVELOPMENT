@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 id="title">Original Title</h1>
+    <p id="description">Original description text.</p>
+    <p class="info">This paragraph has a class.</p>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    
+    <button onclick="changeElements()">Change Elements</button>
+    <button onclick="addListItem()">Add List Item</button>
+    <button onclick="resetPage()">Reset</button>
+
+    <h1>User Input Demo</h1>
+    
+    <!-- Text input -->
+    <div>
+        <label>Your Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="greetUser()">Greet Me</button>
+    </div>
+    
+    <div id="greeting"></div>
+    
+    <hr>
+    
+    <!-- Number input -->
+    <div>
+        <label>Age:</label>
+        <input type="number" id="ageInput" placeholder="Enter your age">
+        <button onclick="checkAge()">Check Age</button>
+    </div>
+    
+    <div id="ageResult"></div>
+
+    <hr>
+</body>
+</html>

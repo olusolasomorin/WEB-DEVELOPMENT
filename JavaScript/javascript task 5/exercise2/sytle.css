@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+textarea{
+    padding: 20px;
+    width: 50%;
+    height: 70%;
+    background-color: rgb(226, 214, 228);
+    border-radius: 20px;
+}
+
+#counted {
+    color: black;
+   display: flex;
+}
+
+.text-con{
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}

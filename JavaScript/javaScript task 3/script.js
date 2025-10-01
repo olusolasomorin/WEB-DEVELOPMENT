@@ -293,13 +293,3 @@ function getLetterGrade(numGrade) {
 function sortStudentByGrade() {
     return [...students].sort((a, b) => b.grade - a.grade);
 }
-
-
-// Formatted report
-function reportGenerator() {
-    console.log("==== Class Report ====")
-    console.log("Name       Grade(score)        Grade")
-    for (let student of students) {
-        console.log(`${student.name}        ${student.grade}`)
-    }
-}
