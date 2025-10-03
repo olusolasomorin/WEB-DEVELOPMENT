@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css
+    ">
 </head>
 <body>
+    <!-- live clock -->
+    <h1>Live Clock</h1>
     
+    <div class="clock" id="clockDisplay">
+        00:00:00
+    </div>
+
+    <br><br>
+
+    <button onclick="startClock()">
+        Start
+    </button>
+    <button onclick="stopClock()">
+        Stop
+    </button>
+
+    <!-- simple countdown -->
+
+
+    <h2>Countdown Timer</h2>
+
+    <div class="timer" id="timerDisplay">00:00</div>
+
+    <br>
+
+    <input type="number" id="minutesInput" placeholder="Minutes" value="5">
+    <input type="number" id="secondsInput" placeholder="Minutes" value="0">
+
+    <br><br>
+
+    <button onclick="startTimer()" class="timerButton">Start</button>
+    <button onclick="stopTimer()" class="timerButton">Stop</button>
+    <button onclick="resetTimer()" class="timerButton">Reset</button>
 </body>
 </html>

@@ -66,3 +66,131 @@ function hideNotificationNow() {
 }
 
 showNotification("Welcome");
+
+
+// setInterval runs code REPEATEDLY
+// Syntax: setInterval(function, milliseconds)
+let counter = 0;
+
+// This runs every 1 second
+let intervalId = setInterval(function () {
+    counter++;
+    console.log("Counter:", counter);
+
+    // Stop after 5 times
+    if  (counter >= 5) {
+        clearInterval(intervalId);
+        console.log("Stopped!");
+    }
+}, 1000);
+
+
+// Simple Countdown Timer
+function startCountdown(seconds) {
+    let timeLeft = seconds;
+
+    console.log("Countdown started:", timeLeft);
+
+    let CountdownId = setInterval(function () {
+        timeLeft--;
+        console.log("Time left:", timeLeft);
+
+        if (timeLeft <= 0) {
+            clearInterval(CountdownId);
+            console.log("Time's up!");
+        }
+    }, 1000);
+}
+
+startCountdown(10);
+
+let clockInterval = null;
+
+function updateClock() {
+    // Get current time
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    // Add leading zeros
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) seconds = "0" + seconds;
+
+    // Display time
+    let timeString = hours + ":" + minutes + ":" + seconds;
+    
+    document.getElementById('clockDisplay').textContent = timeString;
+}
+
+function startClock() {
+    updateClock(); // Show time immediately
+    clockInterval = setInterval(updateClock, 1000); // update clock every second
+}
+
+function stopClock() {
+    clearInterval(clockInterval);
+}
+
+// Start automatically 
+startClock();
+
+
+// Countdown Function
+let timerInterval = null;
+let totalSeconds = 0;
+
+function updateDisplay() {
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+
+    // Add leading zeros
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) minutes = "0" + seconds;
+
+    document.getElementById('timerDisplay').textContent = minutes + ":" + seconds;
+
+    // Alert when time is up
+    if (totalSeconds <= 0) {
+        document.getElementById('timerDisplay').textContent = "TIME'S UP!";
+    }
+}
+
+function startTimer() {
+    //Get user input
+    let minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+    let seconds = parseInt(document.getElementById('secondsInput').value) || 0;
+
+    totalSeconds = (minutes * 60) + seconds;
+
+    if (totalSeconds <= 0) {
+        alert("Please enter a time!");
+        return;
+    }
+
+    updateDisplay();
+
+    // Start countdown
+    timerInterval = setInterval(function() {
+        totalSeconds--;
+        updateDisplay();
+
+        if (totalSeconds <= 0) {
+            clearInterval(timerInterval);
+            alert("Time's up!");
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    totalSeconds = 0;
+    updateDisplay();
+}
+
+updateDisplay();
